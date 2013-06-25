@@ -13,7 +13,7 @@ module.exports = function(app){
                 height: 'all'
             }
         };
-        var url = "http://127.0.0.1:3000/" + req.params.username + "/tweet";
+        var url = "http://obscure-everglades-5872.herokuapp.com/" + req.params.username + "/tweet";
         webshot(url, opt, function(err, renderStream) {
             var img = "";
 
