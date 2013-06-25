@@ -13,7 +13,9 @@ module.exports = function(app){
                 height: 'all'
             }
         };
-        var url = "http://obscure-everglades-5872.herokuapp.com/" + req.params.username + "/tweet";
+        console.log(req.headers.host);
+        var url = "http://" + req.headers.host + "/" + req.params.username + "/tweet";
+        console.log(url);
         webshot(url, opt, function(err, renderStream) {
             var img = "";
 
