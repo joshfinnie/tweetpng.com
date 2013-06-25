@@ -1,0 +1,24 @@
+{
+  "name": "last-tweet-png",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Josh Finnie <josh.finnie@gmail.com>",
+  "description": "An API that creates an image of your last tweet.",
+  "contributors": [
+    {
+      "name": "Josh Finnie",
+      "email": "josh.finnie@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "express": "3.0.x",
+    "ejs": "0.8.x",
+    "cheerio": "0.12.x",
+    "request": "2.21.x",
+    "webshot": "0.5.x"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.2.x"
+  }
+}
