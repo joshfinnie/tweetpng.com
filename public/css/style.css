@@ -1,0 +1,57 @@
+body {
+  width: 520px;
+  display: block;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+}
+
+#content s {
+  text-decoration: none;
+}
+
+.img {
+  display: inline-block;
+  border-radius: 5px;
+  vertical-align: middle;
+  float: left;
+  width: 48px;
+  height: 48px;
+}
+
+.info {
+  padding-left: 60px;
+  display: block;
+}
+
+.fullname {
+  font-weight: bold;
+}
+
+.screenname {
+  font-size: small;
+  color: #999;
+}
+
+.timestamp {
+  float: right;
+  font-size: small;
+  color: #999;
+}
+
+.tweet {
+  display: block;
+  padding-left: 60px;
+}
+
+.tweet a {
+  text-decoration:none;
+  color: #056B6F;
+}
+
+.branding {
+  color: #BDBDBD;
+  font-size: small;
+  float: right;
+}
