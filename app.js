@@ -15,6 +15,7 @@ app.configure(function(){
   app.use(express.static(path.join(__dirname, 'public')));
 });
 
+require("./routers/home")(app);
 require("./routers/get-tweet")(app);
 require("./routers/get-tweet-png")(app);
 
