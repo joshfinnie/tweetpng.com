@@ -1,7 +1,7 @@
 var webshot = require("webshot");
 
 module.exports = function(app){
-    app.get("/:username/tweet.png", function(req, res){
+    app.get("/:username/tweet/last.png", function(req, res){
 
         var opt = {
             screenSize: {
