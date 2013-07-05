@@ -15,7 +15,7 @@
     "ejs": "0.8.x",
     "cheerio": "0.12.x",
     "request": "2.21.x",
-    "webshot": "0.5.x"
+    "webshot": "0.5.0"
   },
   "engines": {
     "node": "0.10.x",
