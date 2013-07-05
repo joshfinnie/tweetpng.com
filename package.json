@@ -1,6 +1,6 @@
 {
   "name": "last-tweet-png",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "author": "Josh Finnie <josh.finnie@gmail.com>",
   "description": "An API that creates an image of your last tweet.",
