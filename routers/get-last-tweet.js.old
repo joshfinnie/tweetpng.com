@@ -1,0 +1,41 @@
+var cheerio, request;
+
+request = require("request");
+
+cheerio = require("cheerio");
+
+module.exports = function(app) {
+  return app.get("/:username/last", function(req, res) {
+    var isRetweeted, url;
+    isRetweeted = false;
+    url = "https://twitter.com/" + req.params.username;
+    return request(url, function(err, rrr, body) {
+      var $, avatarURL, fullName, timeStamp, tweet, userName;
+      $ = cheerio.load(body);
+      tweet = $(".tweet-text").html();
+      fullName = $(".stream-item-header .fullname").html();
+      userName = $(".stream-item-header .username").html();
+      timeStamp = $(".stream-item-header ._timestamp").html();
+      avatarURL = $(".stream-item-header img").attr("src");
+      if ($(".js-retweet-text a").attr("href").toLowerCase().substr(1) !== $(".stream-item-header .username b").html().toLowerCase()) {
+        isRetweeted = $(".js-retweet-text").html();
+      }
+      if (tweet === null) {
+        tweet = "This user's tweets are protected.";
+        avatarURL = "/images/protected.png";
+      }
+      if (fullName === null) {
+        tweet = "This user does not exist.";
+        avatarURL = "/images/not_exist.png";
+      }
+      return res.render("tweet", {
+        fullName: fullName,
+        userName: userName,
+        timeStamp: timeStamp,
+        tweet: tweet,
+        isRetweeted: isRetweeted,
+        avatarURL: avatarURL
+      });
+    });
+  });
+};
