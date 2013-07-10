@@ -11,7 +11,7 @@ module.exports = function(app){
             console.log(tweet);
             var fullName = $('.permalink-header .fullname').html();
             console.log("full name" + fullName);
-            var screenName = $('.permalink-header .username').html();
+            var userName = $('.permalink-header .username').html();
             var timeStamp = "";
             var avatarURL = $('.permalink-header a img').attr('src');
             if (fullName === null){
@@ -19,7 +19,7 @@ module.exports = function(app){
                 avatarURL = "/images/protected.png";
             }
             res.render("tweet", {fullName:fullName,
-                                 screenName:screenName,
+                                 userName:userName,
                                  timeStamp:timeStamp,
                                  tweet:tweet,
                                  avatarURL:avatarURL});
