@@ -3,7 +3,6 @@ var webshot = require("webshot");
 module.exports = function(app){
     app.get("/:username/tweet/:tweet.png", function(req, res){
         var url = "";
-        console.log(req.params.tweet);
         var opt = {
             screenSize: {
                 width: 550,
@@ -14,7 +13,6 @@ module.exports = function(app){
                 height: 'all'
             }
         };
-        console.log(req.headers.host);
 
         if (req.params.tweet === 'last') {
             url = "http://" + req.headers.host + "/" + req.params.username + "/last";

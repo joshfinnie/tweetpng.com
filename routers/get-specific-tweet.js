@@ -8,9 +8,7 @@ module.exports = function(app){
         request(url, function(err, rrr, body){
             $ = cheerio.load(body);
             var tweet = $('.permalink-tweet .tweet-text').html();
-            console.log(tweet);
             var fullName = $('.permalink-header .fullname').html();
-            console.log("full name" + fullName);
             var userName = $('.permalink-header .username').html();
             var timeStamp = "";
             var avatarURL = $('.permalink-header a img').attr('src');
