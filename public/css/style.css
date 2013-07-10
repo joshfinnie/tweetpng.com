@@ -44,7 +44,7 @@ body {
 .retweeted a {
   font-size: small;
   text-decoration:none;
-  color: #056B6F;
+  color: #999;
 }
 
 .timestamp {
