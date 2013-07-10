@@ -35,6 +35,18 @@ body {
   color: #999;
 }
 
+.retweeted {
+  font-size: small;
+  padding-left: 5px;
+  color: #999;
+}
+
+.retweeted a {
+  font-size: small;
+  text-decoration:none;
+  color: #056B6F;
+}
+
 .timestamp {
   float: right;
   font-size: small;
