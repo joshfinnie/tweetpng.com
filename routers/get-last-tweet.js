@@ -20,9 +20,10 @@ module.exports = function(app){
                 avatarURL = "/images/not_exist.png";
             }
             res.render("tweet", {fullName:fullName,
-                                 screenName:screenName,
+                                 userName:userName,
                                  timeStamp:timeStamp,
                                  tweet:tweet,
+                                 isRetweeted:isRetweeted,
                                  avatarURL:avatarURL});
         });
     });
