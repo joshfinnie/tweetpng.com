@@ -16,7 +16,8 @@ app.configure(function(){
 });
 
 require("./routers/home")(app);
-require("./routers/get-tweet")(app);
+require("./routers/get-last-tweet")(app);
+require("./routers/get-specific-tweet")(app);
 require("./routers/get-tweet-png")(app);
 
 var server = require('http').createServer(app);

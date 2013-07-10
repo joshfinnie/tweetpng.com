@@ -48,6 +48,23 @@ html(lang='en')
           | , produces this image:
         p.text-center
           img(src='http://www.lasttweetpng.com/joshfinnie/tweet/last.png', alt='')
+        h3 Getting a specific tweet
+        p
+          | Add&nbsp;
+          code http://www.lasttweetpng.com/:username/tweet/:tweetID.png
+          | &nbsp;to your&nbsp;
+          code img
+          | &nbsp;tag in your HTML, where&nbsp;
+          code :username
+          | &nbsp;is your twitter username.&nbsp;
+          code :tweetID
+          | &nbsp;is the Twitter ID of the tweet you want to use.
+        p
+          | Example: This code,&nbsp;
+          code &lt;img src="http://www.lasttweetpng.com/joshfinnie/tweet/354761173800976384.png" alt="@joshfinnie's tweet ID 354761173800976384"&gt;
+          | , produces this image:
+        p.text-center
+          img(src='http://www.lasttweetpng.com/joshfinnie/tweet/354761173800976384.png', alt='')
       hr
       footer
         p

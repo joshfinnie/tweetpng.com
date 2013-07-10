@@ -1,8 +1,9 @@
 var webshot = require("webshot");
 
 module.exports = function(app){
-    app.get("/:username/tweet/last.png", function(req, res){
-
+    app.get("/:username/tweet/:tweet.png", function(req, res){
+        var url = "";
+        console.log(req.params.tweet);
         var opt = {
             screenSize: {
                 width: 550,
@@ -14,20 +15,37 @@ module.exports = function(app){
             }
         };
         console.log(req.headers.host);
-        var url = "http://" + req.headers.host + "/" + req.params.username + "/tweet";
-        console.log(url);
-        webshot(url, opt, function(err, renderStream) {
-            var img = "";
 
-            renderStream.on("data", function(data){
-                img+=data.toString('binary');
+        if (req.params.tweet === 'last') {
+            url = "http://" + req.headers.host + "/" + req.params.username + "/last";
+            webshot(url, opt, function(err, renderStream) {
+                var img = "";
+
+                renderStream.on("data", function(data){
+                    img+=data.toString('binary');
+                });
+
+                renderStream.on("end", function(){
+                    res.writeHead(200, {'Content-Type': 'image/png' });
+                    res.end(img, 'binary');
+                });
+
             });
+        } else {
+            url = "http://" + req.headers.host + "/" + req.params.username + "/status/" + req.params.tweet;
+            webshot(url, opt, function(err, renderStream) {
+                var img = "";
 
-            renderStream.on("end", function(){
-                res.writeHead(200, {'Content-Type': 'image/png' });
-                res.end(img, 'binary');
+                renderStream.on("data", function(data){
+                    img+=data.toString('binary');
+                });
+
+                renderStream.on("end", function(){
+                    res.writeHead(200, {'Content-Type': 'image/png' });
+                    res.end(img, 'binary');
+                });
+
             });
-
-        });
+        }
     });
-}
+};
