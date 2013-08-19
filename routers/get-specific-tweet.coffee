@@ -1,5 +1,6 @@
 request = require("request")
 cheerio = require("cheerio")
+
 module.exports = (app) ->
   app.get "/:username/status/:id", (req, res) ->
     url = "https://twitter.com/" + req.params.username + "/status/" + req.params.id

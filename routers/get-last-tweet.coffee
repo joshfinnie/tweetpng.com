@@ -1,5 +1,6 @@
 request = require("request")
 cheerio = require("cheerio")
+
 module.exports = (app) ->
   app.get "/:username/last", (req, res) ->
     isRetweeted = false
@@ -11,7 +12,7 @@ module.exports = (app) ->
       userName = $(".stream-item-header .username").html()
       timeStamp = $(".stream-item-header ._timestamp").html()
       avatarURL = $(".stream-item-header img").attr("src")
-      isRetweeted = $(".js-retweet-text").html()  if $(".js-retweet-text a").attr("href").toLowerCase().substr(1) isnt $(".stream-item-header .username b").html().toLowerCase()
+      isRetweeted = $(".js-retweet-text").html()  if $(".js-retweet-text a").attr("href").substr(1).toLowerCase() isnt $(".stream-item-header .username b").html().toLowerCase() if $(".js-retweet-text").html() isnt null
       if tweet is null
         tweet = "This user's tweets are protected."
         avatarURL = "/images/protected.png"
