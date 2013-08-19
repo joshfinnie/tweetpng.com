@@ -19,8 +19,10 @@ module.exports = (app) ->
           img += data.toString("binary")
 
         renderStream.on "end", ->
-          res.writeHead 200, "Content-Type": "image/png"
-          res.end img, "binary"
+          res.setHeader "Content-Type", "image/png"
+          res.writeHead 200
+          res.write img, "binary"
+          res.end()
     else
       url = "http://" + req.headers.host + "/" + req.params.username + "/status/" + req.params.tweet
       webshot url, opt, (err, renderStream) ->
@@ -29,7 +31,7 @@ module.exports = (app) ->
           img += data.toString("binary")
 
         renderStream.on "end", ->
-          res.writeHead 200, "Content-Type": "image/png"
-          res.end img, "binary"
-
-
+          res.setHeader "Content-Type", "image/png"
+          res.writeHead 200
+          res.write img, "binary"
+          res.end()

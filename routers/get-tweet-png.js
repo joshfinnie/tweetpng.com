@@ -26,10 +26,10 @@ module.exports = function(app) {
           return img += data.toString("binary");
         });
         return renderStream.on("end", function() {
-          res.writeHead(200, {
-            "Content-Type": "image/png"
-          });
-          return res.end(img, "binary");
+          res.setHeader("Content-Type", "image/png");
+          res.writeHead(200);
+          res.write(img, "binary");
+          return res.end();
         });
       });
     } else {
@@ -41,10 +41,10 @@ module.exports = function(app) {
           return img += data.toString("binary");
         });
         return renderStream.on("end", function() {
-          res.writeHead(200, {
-            "Content-Type": "image/png"
-          });
-          return res.end(img, "binary");
+          res.setHeader("Content-Type", "image/png");
+          res.writeHead(200);
+          res.write(img, "binary");
+          return res.end();
         });
       });
     }
