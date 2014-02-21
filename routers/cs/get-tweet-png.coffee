@@ -20,6 +20,8 @@ module.exports = (app) ->
 
         renderStream.on "end", ->
           res.setHeader "Content-Type", "image/png"
+          res.setHeader "Cache-Control", "public, max-age=300"
+          res.setHeader "Expires", new Date(Date.now() + 300000).toUTCString()
           res.writeHead 200
           res.write img, "binary"
           res.end()
@@ -32,6 +34,8 @@ module.exports = (app) ->
 
         renderStream.on "end", ->
           res.setHeader "Content-Type", "image/png"
+          res.setHeader "Cache-Control", "public, max-age=604800"
+          res.setHeader "Expires", new Date(Date.now() + 604800000).toUTCString()
           res.writeHead 200
           res.write img, "binary"
           res.end()
