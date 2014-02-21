@@ -1,3 +1,5 @@
+http = require('http')
+http.globalAgent.maxSockets = 64
 express = require("express")
 path = require("path")
 app = express()
@@ -5,12 +7,14 @@ app.configure ->
   app.set "port", process.env.PORT or 3000
   app.set "views", __dirname + "/views"
   app.set "view engine", "jade"
-  app.use express.favicon()
+  app.use express.favicon(path.join(__dirname, 'public/images/favicon.ico'))
   app.use express.logger("dev")
-  app.use express.bodyParser()
+  app.use express.urlencoded()
+  app.use express.json()
   app.use express.methodOverride()
   app.use app.router
   app.use express.static(path.join(__dirname, "public"))
+  app.locals.pretty = true
 
 require("./routers/home") app
 require("./routers/get-last-tweet") app

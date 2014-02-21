@@ -1,0 +1,4 @@
+node_modules/*
+*.js
+public/css/*.min.css
+public/lib

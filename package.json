@@ -1,6 +1,6 @@
 {
-  "name": "last-tweet-png",
-  "version": "0.0.3",
+  "name": "tweet-png",
+  "version": "0.0.4",
   "private": true,
   "author": "Josh Finnie <josh@jfin.us>",
   "description": "An API that creates an image of your last tweet.",
@@ -11,16 +11,15 @@
     }
   ],
   "dependencies": {
-    "express": "3.0.x",
-    "jade": "0.32.x",
-    "cheerio": "0.12.x",
-    "request": "2.21.x",
-    "webshot": "0.5.0",
-    "coffee-script": "1.6.x"
+    "express": "3.4.x",
+    "jade": "1.1.x",
+    "cheerio": "0.13.x",
+    "request": "2.34.x",
+    "webshot": "0.10.x"
   },
   "engines": {
     "node": "0.10.x",
-    "npm": "1.2.x"
+    "npm": "1.3.x"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "0.6.x",
