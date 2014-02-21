@@ -1,0 +1,20 @@
+{
+  "name": "lasttweetpng.com",
+  "version": "0.0.3",
+  "authors": [
+    "Josh Finnie <josh@jfin.us>"
+  ],
+  "main": "app.js",
+  "license": "MIT",
+  "homepage": "http://www.lasttweetpng.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1"
+  }
+}

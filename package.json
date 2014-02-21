@@ -21,5 +21,14 @@
   "engines": {
     "node": "0.10.x",
     "npm": "1.2.x"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "0.6.x",
+    "grunt-contrib-cssmin": "0.6.x",
+    "grunt-contrib-coffee": "0.7.x",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-coffeelint": "0.0.8",
+    "grunt": "~0.4.2",
+    "bower": "~1.2.8"
   }
 }
