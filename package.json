@@ -2,12 +2,12 @@
   "name": "last-tweet-png",
   "version": "0.0.3",
   "private": true,
-  "author": "Josh Finnie <josh.finnie@gmail.com>",
+  "author": "Josh Finnie <josh@jfin.us>",
   "description": "An API that creates an image of your last tweet.",
   "contributors": [
     {
       "name": "Josh Finnie",
-      "email": "josh.finnie@gmail.com"
+      "email": "josh@jfin.us"
     }
   ],
   "dependencies": {
