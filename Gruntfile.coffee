@@ -14,7 +14,7 @@ module.exports = (grunt) ->
         files: ['Gruntfile.coffee']
         tasks: ['coffeelint']
       coffee_routers:
-        files: ['routers/*.coffee']
+        files: ['routers/cs/*.coffee']
         tasks: ['coffee:routers']
       coffee_app:
         files: ['app.coffee']
