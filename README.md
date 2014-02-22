@@ -1,6 +1,6 @@
-# Last Tweet PNG
+# Tweet PNG
 
-LastTweetPNG.com provides a super-simple API to display your latest tweet as an image.
+TweetPNG.com provides a super-simple API to display a tweet as an image.
 
 ## How to do it...
 
@@ -21,15 +21,9 @@ LastTweetPNG.com is written in `CoffeeScript` using the `Node.js` Framework. To 
     $ node --version
     v0.10.22
 
-2 Install both CoffeeScript and JSHint globally.
+2 Install both Grunt-CLI and Bower globably.
 
-    $ npm install -g coffeescript
-    $ npm install -g jshint
+    $ npm install -g grunt-cli
+    $ npm install -g bower
 
-3 After making changes to the CoffeeScript files, convert them to Javascript
-
-    $ coffee -c fileName.coffee
-
-4 Finally run JSHint on the generated JavaScript code.
-
-    $ jshint fileName.js
+Run `grunt watch` and `node app`.
