@@ -6,11 +6,11 @@ TweetPNG.com provides a super-simple API to display a tweet as an image.
 
 ### Getting your latest tweet
 
-Add `http://www.lasttweetpng.com/:username/tweet/latest.png` to your img tag in your HTML, where `:username` is your twitter username.
+Add `http://www.tweetpng.com/:username/tweet/latest.png` to your img tag in your HTML, where `:username` is your twitter username.
 
 ### Getting a specific tweet
 
-Add `http://www.lasttweetpng.com/:username/tweet/:tweetID.png` to your img tag in your HTML, where `:username` is your twitter username. `:tweetID` is the Twitter ID of the tweet you want to use.
+Add `http://www.tweetpng.com/:username/tweet/:tweetID.png` to your img tag in your HTML, where `:username` is your twitter username. `:tweetID` is the Twitter ID of the tweet you want to use.
 
 ## Development
 
