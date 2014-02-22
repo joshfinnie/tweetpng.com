@@ -1,0 +1,35 @@
+# Last Tweet PNG
+
+LastTweetPNG.com provides a super-simple API to display your latest tweet as an image.
+
+## How to do it...
+
+### Getting your latest tweet
+
+Add `http://www.lasttweetpng.com/:username/tweet/latest.png` to your img tag in your HTML, where `:username` is your twitter username.
+
+### Getting a specific tweet
+
+Add `http://www.lasttweetpng.com/:username/tweet/:tweetID.png` to your img tag in your HTML, where `:username` is your twitter username. `:tweetID` is the Twitter ID of the tweet you want to use.
+
+## Development
+
+LastTweetPNG.com is written in `CoffeeScript` using the `Node.js` Framework. To set up your environment, follow these steps:
+
+1 Check if you are using a 0.10.x version of Node.js.
+
+    $ node --version
+    v0.10.22
+
+2 Install both CoffeeScript and JSHint globally.
+
+    $ npm install -g coffeescript
+    $ npm install -g jshint
+
+3 After making changes to the CoffeeScript files, convert them to Javascript
+
+    $ coffee -c fileName.coffee
+
+4 Finally run JSHint on the generated JavaScript code.
+
+    $ jshint fileName.js

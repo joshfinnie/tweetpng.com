@@ -3,7 +3,7 @@
   "version": "0.0.4",
   "private": true,
   "author": "Josh Finnie <josh@jfin.us>",
-  "description": "An API that creates an image of your last tweet.",
+  "description": "An API that creates an image of a tweet.",
   "contributors": [
     {
       "name": "Josh Finnie",
