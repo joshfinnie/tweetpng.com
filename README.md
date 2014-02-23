@@ -26,4 +26,4 @@ LastTweetPNG.com is written in `CoffeeScript` using the `Node.js` Framework. To 
     $ npm install -g grunt-cli
     $ npm install -g bower
 
-Run `grunt watch` and `node app`.
+Run `grunt watch` and `coffee app.coffee`.

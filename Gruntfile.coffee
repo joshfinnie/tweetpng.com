@@ -7,33 +7,13 @@ module.exports = (grunt) ->
       tweet_css:
         files: ['public/css/tweet.css']
         tasks: ['cssmin:tweet']
-      jshint:
-        files: ['routers/*.js', 'app.js'],
-        tasks: ['jshint']
       coffeelint:
-        files: ['Gruntfile.coffee']
+        files: ['Gruntfile.coffee', 'app.coffee', 'routers/*.coffee']
         tasks: ['coffeelint']
-      coffee_routers:
-        files: ['routers/cs/*.coffee']
-        tasks: ['coffee:routers']
-      coffee_app:
-        files: ['app.coffee']
-        tasks: ['coffee:app']
-    coffee:
-      routers:
-        expand: true,
-        flatten: true,
-        cwd: 'routers/cs',
-        src: ['*.coffee'],
-        dest: 'routers/',
-        ext: '.js'
-      app:
-        files:
-          'app.js': 'app.coffee'
-    jshint:
-      files: ['routers/*.js', 'app.js'],
     coffeelint:
-      files: ['Gruntfile.coffee']
+      options:
+        configFile: 'coffeelint.json'
+      files: ['Gruntfile.coffee', 'app.coffee', 'routers/*.coffee']
     cssmin:
       tweet:
         files:
