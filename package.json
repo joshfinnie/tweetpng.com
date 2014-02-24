@@ -15,7 +15,10 @@
     "jade": "1.1.x",
     "cheerio": "0.13.x",
     "request": "2.34.x",
-    "webshot": "0.10.x"
+    "webshot": "0.10.x",
+    "redis": "~0.10.1",
+    "hiredis": "~0.1.16",
+    "redis-throttle": "0.0.1"
   },
   "engines": {
     "node": "0.10.x",
