@@ -4,6 +4,10 @@
   "private": true,
   "author": "Josh Finnie <josh@jfin.us>",
   "description": "An API that creates an image of a tweet.",
+  "main": "app/server.js",
+  "scripts": {
+    "test": "mocha --compilers coffee:coffee-script/register --timeout 15000"
+  },
   "contributors": [
     {
       "name": "Josh Finnie",
@@ -28,6 +32,10 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-coffeelint": "0.0.8",
     "grunt": "~0.4.2",
-    "bower": "~1.2.8"
+    "bower": "~1.2.8",
+    "chai": "~1.9.0",
+    "mocha": "~1.17.1",
+    "supertest": "~0.9.0",
+    "coffee-script": "~1.7.1"
   }
 }
