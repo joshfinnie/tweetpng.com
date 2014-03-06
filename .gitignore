@@ -1,4 +1,4 @@
 node_modules/*
 *.js
-public/css/*.min.css
-public/lib
+app/public/css/*.min.css
+app/public/lib/

@@ -2,7 +2,9 @@ http = require('http')
 http.globalAgent.maxSockets = 64
 express = require("express")
 path = require("path")
-app = express()
+
+app = exports.app = express()
+
 app.configure ->
   app.set "port", process.env.PORT or 3000
   app.set "views", __dirname + "/views"
@@ -24,7 +26,9 @@ require("./routers/about") app
 require("./routers/get-last-tweet") app
 require("./routers/get-specific-tweet") app
 require("./routers/get-tweet-png") app
+
 server = require("http").createServer(app)
 port = process.env.PORT or 3000
 server.listen port
+
 console.log "Listening port " + port
