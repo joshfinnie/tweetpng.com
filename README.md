@@ -19,7 +19,7 @@ LastTweetPNG.com is written in `CoffeeScript` using the `Node.js` Framework. To 
 1 Check if you are using a 0.10.x version of Node.js.
 
     $ node --version
-    v0.10.22
+    v0.10.26
 
 2 Install Coffeescript, Grunt-CLI and Bower globably.
 
