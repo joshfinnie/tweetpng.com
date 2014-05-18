@@ -25,6 +25,7 @@ require("./routers/home") app
 require("./routers/about") app
 require("./routers/get-last-tweet") app
 require("./routers/get-specific-tweet") app
+require("./routers/get-tweet") app
 require("./routers/get-tweet-png") app
 
 server = require("http").createServer(app)

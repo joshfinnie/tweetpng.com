@@ -19,7 +19,8 @@
     "jade": "1.1.x",
     "cheerio": "0.13.x",
     "request": "2.34.x",
-    "webshot": "0.10.x"
+    "webshot": "0.10.x",
+    "twit": "1.1.14"
   },
   "engines": {
     "node": ">=0.8.x"

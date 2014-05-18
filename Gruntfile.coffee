@@ -24,9 +24,8 @@ module.exports = (grunt) ->
 
   #load our tasks
   grunt.loadNpmTasks "grunt-contrib-coffee"
-  grunt.loadNpmTasks "grunt-contrib-jshint"
   grunt.loadNpmTasks "grunt-coffeelint"
   grunt.loadNpmTasks "grunt-contrib-cssmin"
   grunt.loadNpmTasks "grunt-contrib-watch"
 
-  grunt.registerTask "default", ["coffee", "jshint", "cssmin"]
+  grunt.registerTask "default", ["coffeelint", "cssmin"]
