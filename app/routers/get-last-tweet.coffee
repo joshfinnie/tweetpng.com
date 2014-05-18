@@ -14,7 +14,7 @@ module.exports = (app) ->
       userName = data.screenName
       timeStamp = $last.find('.js-short-timestamp').html().trim()
       avatarURL = $last.find('.js-action-profile-avatar').attr('src')
-      isRetweeted = data.retweeter ? $last.find('.js-retweet-text').text().trim() : null
+      isRetweeted = data.retweeter ? $last.find('.js-retweet-text').text().trim()
       if tweet is null
         tweet = "This user's tweets are protected."
         avatarURL = "/images/protected.png"
