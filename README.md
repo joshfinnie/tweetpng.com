@@ -2,6 +2,8 @@
 
 TweetPNG.com provides a super-simple API to display a tweet as an image.
 
+[![Build Status](https://travis-ci.org/joshfinnie/tweetpng.com.svg?branch=master)](https://travis-ci.org/joshfinnie/tweetpng.com)
+
 ## How to do it...
 
 ### Getting your latest tweet
