@@ -3,3 +3,4 @@ node_modules/*
 app/public/css/*.min.css
 app/public/lib/
 dump.rdb
+.DS_Store
