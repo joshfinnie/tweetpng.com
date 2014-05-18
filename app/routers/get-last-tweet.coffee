@@ -7,12 +7,14 @@ module.exports = (app) ->
     url = "https://twitter.com/" + req.params.username
     request url, (err, rrr, body) ->
       $ = cheerio.load(body)
-      tweet = $(".tweet-text").html()
-      fullName = $(".stream-item-header .fullname").html()
-      userName = $(".stream-item-header .username").html()
-      timeStamp = $(".stream-item-header ._timestamp").html()
-      avatarURL = $(".stream-item-header img").attr("src")
-      isRetweeted = $(".js-retweet-text").html()  if $(".js-retweet-text a").attr("href").substr(1).toLowerCase() isnt $(".stream-item-header .username b").html().toLowerCase() if $(".js-retweet-text").html() isnt null
+      $last = $('.js-tweet').first()
+      data = $last.data()
+      tweet = $last.find('.js-tweet-text').html().trim()
+      fullName = data.name
+      userName = data.screenName
+      timeStamp = $last.find('.js-short-timestamp').html().trim()
+      avatarURL = $last.find('.js-action-profile-avatar').attr('src')
+      isRetweeted = data.retweeter ? $last.find('.js-retweet-text').text().trim()
       if tweet is null
         tweet = "This user's tweets are protected."
         avatarURL = "/images/protected.png"
