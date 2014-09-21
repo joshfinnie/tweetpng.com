@@ -10,6 +10,10 @@ TweetPNG.com provides a super-simple API to display a tweet as an image.
 
 Add `http://www.tweetpng.com/:username/tweet/latest.png` to your img tag in your HTML, where `:username` is your twitter username.
 
+### Getting your latest tweet including replies
+
+Twitter seperated your tweets and replies into two different tabs, so TweetPNG gives you this option. Add `?withReply=true` after the URL above to get your tweets and replies. `http://www.tweetpng.com/:username/tweet/latest.png?withReply=true`
+
 ### Getting a specific tweet
 
 Add `http://www.tweetpng.com/:username/tweet/:tweetID.png` to your img tag in your HTML, where `:username` is your twitter username. `:tweetID` is the Twitter ID of the tweet you want to use.

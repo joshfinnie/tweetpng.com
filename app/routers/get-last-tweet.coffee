@@ -4,7 +4,10 @@ cheerio = require("cheerio")
 module.exports = (app) ->
   app.get "/:username/last", (req, res) ->
     isRetweeted = false
-    url = "https://twitter.com/" + req.params.username
+    if req.query.withReplies == 'true'
+      url = "https://twitter.com/" + req.params.username + "/with_replies"
+    else
+      url = "https://twitter.com/" + req.params.username
     request url, (err, rrr, body) ->
       $ = cheerio.load(body)
       $last = $('.js-tweet').first()
