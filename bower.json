@@ -1,16 +1,16 @@
 {
-  "name": "lasttweetpng.com",
-  "version": "0.0.3",
+  "name": "tweetpng.com",
+  "version": "0.1.1",
   "authors": [
     "Josh Finnie <josh@jfin.us>"
   ],
-  "main": "app.js",
+  "main": "app/server.coffee",
   "license": "MIT",
-  "homepage": "http://www.lasttweetpng.com",
+  "homepage": "http://www.tweetpng.com",
   "ignore": [
     "**/.*",
+    "app/public/lib"
     "node_modules",
-    "bower_components",
     "test",
     "tests"
   ],

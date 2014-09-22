@@ -1,10 +1,10 @@
 {
-  "name": "tweet-png",
-  "version": "0.0.4",
+  "name": "tweetpng.com",
+  "version": "0.1.1",
   "private": true,
   "author": "Josh Finnie <josh@jfin.us>",
   "description": "An API that creates an image of a tweet.",
-  "main": "app/server.js",
+  "main": "app/server.coffee",
   "scripts": {
     "test": "mocha --compilers coffee:coffee-script/register --timeout 15000"
   },
