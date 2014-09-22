@@ -22,7 +22,7 @@
     "webshot": "0.10.x"
   },
   "engines": {
-    "node": ">=0.8.x"
+    "node": ">=0.10.x"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "0.6.x",
