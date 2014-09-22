@@ -15,9 +15,10 @@
     }
   ],
   "dependencies": {
+    "cheerio": "0.13.x",
     "express": "3.4.x",
     "jade": "1.1.x",
-    "cheerio": "0.13.x",
+    "marked": "0.3.x",
     "request": "2.34.x",
     "webshot": "0.10.x"
   },
