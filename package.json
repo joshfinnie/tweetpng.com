@@ -6,7 +6,8 @@
   "description": "An API that creates an image of a tweet.",
   "main": "app/server.coffee",
   "scripts": {
-    "test": "mocha --compilers coffee:coffee-script/register --timeout 15000"
+    "test": "mocha --compilers coffee:coffee-script/register --timeout 15000",
+    "postinstall": "bower install && grunt default"
   },
   "contributors": [
     {
