@@ -10,8 +10,6 @@ describe 'GET /joshfinnie/tweet/last.png', ->
             .get('/joshfinnie/tweet/last.png')
             .expect("Content-Type", "image/png")
             .expect 200, done
-        return
-    return
 
 describe 'GET /joshfinnie/tweet/354761173800976384.png', ->
     it 'returns a specific tweet png', (done) ->
@@ -19,5 +17,3 @@ describe 'GET /joshfinnie/tweet/354761173800976384.png', ->
             .get('/joshfinnie/tweet/354761173800976384.png')
             .expect("Content-Type", "image/png")
             .expect 200, done
-        return
-    return

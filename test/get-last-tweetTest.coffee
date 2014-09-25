@@ -10,5 +10,3 @@ describe 'GET /joshfinnie/last', ->
             .get('/joshfinnie/last')
             .expect("Content-Type", "text/html; charset=utf-8")
             .expect 200, done
-        return
-    return
