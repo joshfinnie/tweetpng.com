@@ -7,21 +7,26 @@ block content
   .row.marketing
     h2 How to do it...
     h3.text-center Please Note: This only works with the new <a href="https://about.twitter.com/products/new-profiles">Twitter Profiles</a>.
+    :markdown
+      ### Getting your last tweet
 
-    h3 Getting your last tweet
-    span!= marked("Add `http://www.tweetpng.com/:username/tweet/last.png` to your `img` tag in your HTML, where `:username` is your Twitter handle.")
-    p Example:
+      Add `http://www.tweetpng.com/:username/tweet/last.png` to your `img` tag in your HTML, where `:username` is your Twitter handle.
+
+      Example:
     p.text-center
       img(src='/joshfinnie/tweet/last.png', alt='')
-
-    h3 Getting your latest tweet including replies
-    span!= marked("Add `http://www.tweetpng.com/:username/tweet/last.png?withReplies=true` to your `img` tag in your HTML, where `:username` is your Twitter handle.")
-    p Example:
+    :markdown
+      ### Getting your latest tweet including replies
+    
+      Add `http://www.tweetpng.com/:username/tweet/last.png?withReplies=true` to your `img` tag in your HTML, where `:username` is your Twitter handle.
+      Example:
     p.text-center
       img(src='/joshfinnie/tweet/last.png?withReplies=true', alt='')
+    :markdown
+      ### Getting a specific tweet
 
-    h3 Getting a specific tweet
-    span!= marked("Add `http://www.tweetpng.com/:username/tweet/:tweetID.png` to your `img` tag in your HTML, where `:username` is your Twitter handle and `:tweetID` in the tweet ID.")
-    p Example:
+      Add `http://www.tweetpng.com/:username/tweet/:tweetID.png` to your `img` tag in your HTML, where `:username` is your Twitter handle and `:tweetID` in the tweet ID.
+
+      Example:
     p.text-center
       img(src='/joshfinnie/tweet/354761173800976384.png', alt='')
