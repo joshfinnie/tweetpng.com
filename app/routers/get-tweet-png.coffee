@@ -12,7 +12,7 @@ module.exports = (app) ->
         height: "all"
 
     if req.params.tweet is "last"
-      if req.query.withReply == 'true'
+      if req.query.withReplies == 'true'
         url = "http://" + req.headers.host + "/" + req.params.username + "/last?withReplies=true"
       else
         url = "http://" + req.headers.host + "/" + req.params.username + "/last?withReplies=false"
