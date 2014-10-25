@@ -10,7 +10,7 @@ module.exports = (app) ->
       fullName = $(".permalink-header .fullname").html()
       userName = $(".permalink-header .username").html()
       timeStamp = ""
-      avatarURL = $(".permalink-header a img").attr("src")
+      avatarURL = $(".js-action-profile-avatar").attr("src")
       if fullName is null
         tweet = "This user's tweet is protected or not available."
         avatarURL = "/images/protected.png"
