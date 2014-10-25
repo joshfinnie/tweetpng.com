@@ -13,9 +13,9 @@ module.exports = (app) ->
 
     if req.params.tweet is "last"
       if req.query.withReplies == 'true'
-        url = "http://" + req.headers.host + "/" + req.params.username + "/last?withReplies=true"
+        url = "http://" + req.headers.host + "/" + req.params.username + "/status/last?withReplies=true"
       else
-        url = "http://" + req.headers.host + "/" + req.params.username + "/last?withReplies=false"
+        url = "http://" + req.headers.host + "/" + req.params.username + "/status/last?withReplies=false"
       webshot url, opt, (err, renderStream) ->
         img = ""
         renderStream.on "data", (data) ->

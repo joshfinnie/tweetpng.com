@@ -2,7 +2,7 @@ request = require("request")
 cheerio = require("cheerio")
 
 module.exports = (app) ->
-  app.get "/:username/last", (req, res) ->
+  app.get "/:username/status/last", (req, res) ->
     isRetweeted = false
     if req.query.withReplies == 'true'
       url = "https://twitter.com/" + req.params.username + "/with_replies"

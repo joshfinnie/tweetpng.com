@@ -16,12 +16,16 @@
     }
   ],
   "dependencies": {
-    "cheerio": "0.13.x",
-    "express": "3.4.x",
-    "jade": "1.1.x",
-    "marked": "0.3.x",
-    "request": "2.34.x",
-    "webshot": "0.10.x"
+    "body-parser": "^1.9.1",
+    "cheerio": "0.17.0",
+    "express": "4.10.0",
+    "jade": "1.7.0",
+    "marked": "^0.3.2",
+    "method-override": "^2.3.0",
+    "morgan": "^1.4.1",
+    "request": "2.46.0",
+    "serve-favicon": "^2.1.6",
+    "webshot": "0.15.3"
   },
   "engines": {
     "node": ">=0.10.x"

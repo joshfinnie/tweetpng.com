@@ -1,25 +1,23 @@
 http = require('http')
 http.globalAgent.maxSockets = 64
 express = require("express")
+favicon = require('serve-favicon')
+morgan = require('morgan')
+bodyParser = require('body-parser')
+methodOverride = require('method-override')
 path = require("path")
 
 app = exports.app = express()
 
-app.configure ->
-  app.set "port", process.env.PORT or 3000
-  app.set "views", __dirname + "/views"
-  app.set "view engine", "jade"
-  app.use express.favicon(path.join(__dirname, 'public/images/favicon.ico'))
-  app.use express.logger("dev")
-  app.use express.urlencoded()
-  app.use express.json()
-  app.use express.methodOverride()
-  app.use app.router
-  app.use express.static(path.join(__dirname, "public"))
-
-app.configure 'development', ->
-  app.use express.errorHandler()
-  app.locals.pretty = true
+app.set "port", process.env.PORT or 3000
+app.set "views", __dirname + "/views"
+app.set "view engine", "jade"
+app.use express.static(__dirname + "/public")
+app.use favicon(__dirname + '/public/images/favicon.ico')
+app.use morgan('dev')
+app.use bodyParser.urlencoded({ extended: false })
+app.use bodyParser.json()
+app.use methodOverride()
 
 require("./routers/home") app
 require("./routers/about") app
