@@ -1,6 +1,0 @@
-node_modules/*
-*.js
-app/public/css/*.min.css
-app/public/lib/
-dump.rdb
-.DS_Store
