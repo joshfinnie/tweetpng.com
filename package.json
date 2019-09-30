@@ -22,7 +22,7 @@
     "jade": "1.8.1",
     "marked": "0.3.2",
     "method-override": "2.3.0",
-    "morgan": "1.5.0",
+    "morgan": "1.9.1",
     "request": "2.49.0",
     "serve-favicon": "2.1.7",
     "webshot": "0.15.3"
