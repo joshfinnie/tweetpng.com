@@ -1,13 +1,15 @@
 {
   "name": "tweetpng.com",
-  "version": "0.1.1",
+  "version": "2.0.0",
   "private": true,
   "author": "Josh Finnie <josh@jfin.us>",
   "description": "An API that creates an image of a tweet.",
-  "main": "app/server.coffee",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "mocha --compilers coffee:coffee-script/register --timeout 15000",
-    "postinstall": "bower install && grunt default"
+    "start": "nodemon -e ts,html,css --exec \"npm run-script compile\"",
+    "compile": "tsc && node ./dist/index.js",
+    "test": "jest __test__",
+    "postinstall": ""
   },
   "contributors": [
     {
@@ -16,31 +18,37 @@
     }
   ],
   "dependencies": {
-    "body-parser": "1.9.3",
-    "cheerio": "0.18.0",
-    "express": "4.10.4",
-    "jade": "1.8.1",
-    "marked": "0.3.2",
-    "method-override": "2.3.0",
-    "morgan": "1.5.0",
-    "request": "2.49.0",
-    "serve-favicon": "2.1.7",
-    "webshot": "0.15.3"
-  },
-  "engines": {
-    "node": ">=0.10.x"
+    "@hapi/hapi": "^19.1.0",
+    "@hapi/inert": "^6.0.1",
+    "@hapi/vision": "^6.0.0",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "handlebars": "^4.7.3",
+    "puppeteer": "^2.1.1",
+    "unfurl-url": "^1.0.0"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "0.10.0",
-    "grunt-contrib-cssmin": "0.10.0",
-    "grunt-contrib-coffee": "0.12.0",
-    "grunt-contrib-watch": "0.6.1",
-    "grunt-coffeelint": "0.0.13",
-    "grunt": "0.4.5",
-    "bower": "1.3.12",
-    "chai": "1.10.0",
-    "mocha": "2.0.1",
-    "supertest": "0.15.0",
-    "coffee-script": "1.8.0"
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/hapi__hapi": "^19.0.1",
+    "@types/hapi__inert": "^5.2.0",
+    "@types/hapi__vision": "^5.5.1",
+    "@types/jest": "^25.1.2",
+    "@types/node": "^13.7.0",
+    "@types/puppeteer": "^2.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
+    "babel-jest": "^25.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-vue": "^6.1.2",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.5",
+    "typescript-eslint-parser": "^22.0.0"
   }
 }

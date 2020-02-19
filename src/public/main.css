@@ -1,0 +1,48 @@
+body {
+  background-color: trasparent;
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-weight: lighter;
+  font-stretch: normal;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: Helvetica, Roboto, 'Segoe UI', Calibri, sans-serif;
+}
+
+.container {
+  max-width: 450px;
+}
+
+img {
+  border-radius: 50%;
+  max-width: 40px;
+  float: left;
+  padding-right: 10px;
+}
+
+.grey {
+  color: grey;
+}
+
+.date a{
+  color: grey;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.date {
+  margin-top: -10px;
+  margin-left: 5px;
+}
+
+.message {
+  margin-top: -10px;
+}
+
+.message a {
+  color: #3b94d9;
+  text-decoration: none;
+}
