@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <div class="container">
+      <a class="twitter-timeline" href="https://twitter.com/{{user}}" data-tweet-limit="1" data-width="399" ></a>
+      <div id="tweetPNG-tweetId" hidden></div>
+      <script src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <script>
+        const div = document.getElementById('tweetPNG-tweetId');
+        const getWidgetInfo = (ev) => {
+          const widget = document.querySelector('#twitter-widget-0');
+          if (widget) {
+            const tweetId = document.getElementById('twitter-widget-0').contentWindow.document.getElementsByClassName('js-tweetIdInfo')[0].dataset.tweetId;
+            div.innerHTML += tweetId;
+            div.removeAttribute('hidden');
+          }
+        };
+        window.addEventListener('DOMNodeRemoved', getWidgetInfo, {capture: true});
+      </script>
+    </div>
+  </body>
+</html>

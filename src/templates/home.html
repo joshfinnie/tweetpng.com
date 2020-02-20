@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An API that creates an image of your last tweet.">
+    <meta name="author" content="Josh Finnie">
+    <title>TweetPNG.com</title>
+    <link rel="icon" href="/static/favicon.ico" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/home.css">
+    <!--
+      if lt IE 9script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+    -->
+  </head>
+  <body>
+    <main role="main">
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">www.TweetPNG.com</h1>
+          <p>www.TweetPNG.com is a simple API to get a tweet as a PNG!</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Example</h2>
+            <p>Add <code>https://www.tweetpng.com/:username/tweet/last.png</code> to your <code>img</code> tag in your HTML, where <code>:username</code> is your Twitter handle.</p>
+            <p class="text-center"><img src="/joshfinnie/tweet/last.png" alt="" class="img-thumbnail"></p>
+
+            <p>Add <code>https://www.tweetpng.com/:username/tweet/:tweetID.png</code> to your <code>img</code> tag in your HTML, where <code>:username</code> is your Twitter handle and <code>:tweetID</code> in the tweet ID.</p>
+            <p class="text-center"><img src="/joshfinnie/tweet/539172552300843008.png" alt="" class="img-thumbnail"></p>
+            <p class="text-center"><a href="https://twitter.com/joshfinnie/status/539172552300843008">Link to Tweet</a></p>
+          </div>
+        </div>
+
+        <hr>
+
+      </div> <!-- /container -->
+
+    </main>
+    <footer class="container">
+      <p class="text-muted text-center">Made with ❤️  in Washington, D.C</p>
+      <p class="text-muted">
+        &copy; 2014<script>new Date().getFullYear()>2014&&document.write("-"+new Date().getFullYear());</script>
+        <span class="float-right">
+          Heavily influenced by a&nbsp;<a href="https://twitter.com/NodeDC">NodeDC</a>&nbsp;talk by&nbsp;<a href="https://github.com/mcwhittemore/cnn-gets-urkeled">Matthew Chase Whittemore</a>.
+        </span>
+      </p>
+    </footer>
+    </div>
+    <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-250621-27', 'tweetpng.com');
+ga('send', 'pageview');
+    </script>
+  </body>
+</html>
