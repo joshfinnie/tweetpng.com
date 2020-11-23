@@ -28,7 +28,7 @@
     "unfurl-url": "^1.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
+    "@babel/core": "^7.12.7",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-typescript": "^7.9.0",
     "@types/hapi__hapi": "^19.0.2",
