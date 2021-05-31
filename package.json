@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-env": "^7.14.4",
     "@babel/preset-typescript": "^7.9.0",
     "@types/hapi__hapi": "^19.0.2",
     "@types/hapi__inert": "^5.2.0",
