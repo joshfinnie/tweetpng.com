@@ -24,7 +24,7 @@
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
     "handlebars": "^4.7.6",
-    "puppeteer": "^2.1.1",
+    "puppeteer": "^19.1.1",
     "unfurl-url": "^1.0.0"
   },
   "devDependencies": {
